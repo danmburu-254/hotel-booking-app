@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunset Stay Hotel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Boutique hotel by the sea</p>
+    <h1>Sunset Stay Hotel</h1>
+    <p>Choose a room, pick your dates, and get ready for a calm weekend away.</p>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Book a stay</a>
+      <a href="gallery.html">View gallery</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="rooms">
+      <h2>Available rooms</h2>
+
+      <article class="room-card">
+        <h3>Garden Room</h3>
+        <p>Cozy room with a queen bed and a quiet garden view.</p>
+        <p class="price">$120 per night</p>
+      </article>
+
+      <article class="room-card">
+        <h3>Ocean Suite</h3>
+        <p>Spacious suite with a balcony facing the water.</p>
+        <p class="price">$220 per night</p>
+      </article>
+
+      <article class="room-card">
+        <h3>Family Loft</h3>
+        <p>Two-level room with space for the whole family.</p>
+        <p class="price">$180 per night</p>
+      </article>
+    </section>
+
+    <section class="booking">
+      <h2>Book your stay</h2>
+      <form id="booking-form">
+        <label for="guest-name">Guest name</label>
+        <input type="text" id="guest-name" name="guestName" required>
+
+        <label for="room-choice">Room choice</label>
+        <select id="room-choice" name="roomChoice" required>
+          <option value="">Choose a room</option>
+          <option value="Garden Room">Garden Room</option>
+          <option value="Ocean Suite">Ocean Suite</option>
+          <option value="Family Loft">Family Loft</option>
+        </select>
+
+        <label for="check-in">Check-in date</label>
+        <input type="date" id="check-in" name="checkIn" required>
+
+        <label for="check-out">Check-out date</label>
+        <input type="date" id="check-out" name="checkOut" required>
+
+        <label for="currency-choice">Currency</label>
+        <select id="currency-choice" name="currencyChoice" required>
+          <option value="USD">US Dollar (USD)</option>
+          <option value="EUR">Euro (EUR)</option>
+          <option value="GBP">British Pound (GBP)</option>
+        </select>
+
+        <button type="submit">Reserve now</button>
+      </form>
+
+      <div id="price-preview" class="price-preview"></div>
+      <div id="booking-summary" class="booking-summary"></div>
+      <button id="clear-booking" class="clear-booking" type="button">Clear saved booking</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
