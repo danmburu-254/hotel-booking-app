@@ -1,4 +1,5 @@
 const bookingForm = document.querySelector("#booking-form");
+<<<<<<< HEAD
 const pricePreview = document.querySelector("#price-preview");
 const bookingSummary = document.querySelector("#booking-summary");
 const clearBookingButton = document.querySelector("#clear-booking");
@@ -63,6 +64,10 @@ function updatePricePreview() {
 
   pricePreview.textContent = `Live estimate: ${estimate.nights} night(s) in the ${roomChoice} will cost ${estimate.currencySymbol}${estimate.convertedTotal.toFixed(2)} ${estimate.currencyChoice}.`;
 }
+=======
+const bookingSummary = document.querySelector("#booking-summary");
+const clearBookingButton = document.querySelector("#clear-booking");
+>>>>>>> 44c1e25a86be38a3bc0982e411ade668cbbed285
 
 const savedBooking = localStorage.getItem("latestBooking");
 
@@ -70,6 +75,7 @@ if (savedBooking) {
   bookingSummary.textContent = savedBooking;
 }
 
+<<<<<<< HEAD
 const pageParameters = new URLSearchParams(window.location.search);
 const roomFromGallery = pageParameters.get("room");
 
@@ -85,10 +91,13 @@ checkOutInput.addEventListener("change", updatePricePreview);
 currencyChoiceInput.addEventListener("change", updatePricePreview);
 updatePricePreview();
 
+=======
+>>>>>>> 44c1e25a86be38a3bc0982e411ade668cbbed285
 bookingForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const guestName = bookingForm.guestName.value;
+<<<<<<< HEAD
   const roomChoice = roomChoiceInput.value;
   const checkIn = checkInInput.value;
   const checkOut = checkOutInput.value;
@@ -102,6 +111,18 @@ bookingForm.addEventListener("submit", function (event) {
   const estimate = calculateBookingEstimate(roomChoice, checkIn, checkOut, currencyChoice);
 
   const confirmationMessage = `${guestName}, your ${roomChoice} is reserved for ${estimate.nights} night(s), from ${checkIn} to ${checkOut}. Estimated total: ${estimate.currencySymbol}${estimate.convertedTotal.toFixed(2)} ${estimate.currencyChoice}.`;
+=======
+  const roomChoice = bookingForm.roomChoice.value;
+  const checkIn = bookingForm.checkIn.value;
+  const checkOut = bookingForm.checkOut.value;
+
+  if (checkOut <= checkIn) {
+    bookingSummary.textContent = "Please choose a check-out date after the check-in date.";
+    return;
+  }
+
+  const confirmationMessage = `${guestName}, your ${roomChoice} is reserved from ${checkIn} to ${checkOut}.`;
+>>>>>>> 44c1e25a86be38a3bc0982e411ade668cbbed285
   bookingSummary.textContent = confirmationMessage;
   localStorage.setItem("latestBooking", confirmationMessage);
 });

@@ -18,6 +18,7 @@ header {
   color: #f8d49d;
 }
 
+<<<<<<< HEAD
 .site-nav {
   display: flex;
   justify-content: center;
@@ -43,6 +44,10 @@ header {
 .rooms,
 .booking,
 .gallery {
+=======
+.rooms,
+.booking {
+>>>>>>> 44c1e25a86be38a3bc0982e411ade668cbbed285
   max-width: 900px;
   margin: 32px auto;
   padding: 0 20px;
@@ -50,9 +55,13 @@ header {
 
 .room-card,
 .booking form,
+<<<<<<< HEAD
 .price-preview,
 .booking-summary,
 .gallery-card {
+=======
+.booking-summary {
+>>>>>>> 44c1e25a86be38a3bc0982e411ade668cbbed285
   background: #ffffff;
   border-radius: 18px;
   padding: 24px;
@@ -61,17 +70,23 @@ header {
   border-left: 6px solid #6bb6b0;
 }
 
+<<<<<<< HEAD
 .price-preview:empty,
+=======
+>>>>>>> 44c1e25a86be38a3bc0982e411ade668cbbed285
 .booking-summary:empty {
   display: none;
 }
 
+<<<<<<< HEAD
 .price-preview {
   background: #eefaf8;
   border-left-color: #2a9d8f;
   font-weight: bold;
 }
 
+=======
+>>>>>>> 44c1e25a86be38a3bc0982e411ade668cbbed285
 .booking-summary {
   background: #fff8e8;
   border-left-color: #f4a261;
@@ -116,6 +131,7 @@ header {
   color: #1f6f8b;
 }
 
+<<<<<<< HEAD
 .gallery {
   display: grid;
   gap: 18px;
@@ -176,20 +192,27 @@ header {
   background: linear-gradient(135deg, #ffe8d6, #f4a261);
 }
 
+=======
+>>>>>>> 44c1e25a86be38a3bc0982e411ade668cbbed285
 @media (max-width: 600px) {
   header {
     padding: 40px 18px;
   }
 
   .rooms,
+<<<<<<< HEAD
   .booking,
   .gallery {
+=======
+  .booking {
+>>>>>>> 44c1e25a86be38a3bc0982e411ade668cbbed285
     margin: 24px auto;
     padding: 0 14px;
   }
 
   .room-card,
   .booking form,
+<<<<<<< HEAD
   .price-preview,
   .booking-summary,
   .gallery-card {
@@ -208,5 +231,10 @@ header {
   .gallery-card .room-link {
     margin-left: 18px;
     margin-right: 18px;
+=======
+  .booking-summary {
+    padding: 18px;
+    border-radius: 14px;
+>>>>>>> 44c1e25a86be38a3bc0982e411ade668cbbed285
   }
 }
