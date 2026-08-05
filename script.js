@@ -2,6 +2,7 @@ const bookingForm = document.querySelector("#booking-form");
 const pricePreview = document.querySelector("#price-preview");
 const bookingSummary = document.querySelector("#booking-summary");
 const clearBookingButton = document.querySelector("#clear-booking");
+const guestNameInput = document.querySelector("#guest-name");
 const roomChoiceInput = document.querySelector("#room-choice");
 const checkInInput = document.querySelector("#check-in");
 const checkOutInput = document.querySelector("#check-out");
@@ -88,11 +89,16 @@ updatePricePreview();
 bookingForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const guestName = bookingForm.guestName.value;
+  const guestName = guestNameInput.value.trim();
   const roomChoice = roomChoiceInput.value;
   const checkIn = checkInInput.value;
   const checkOut = checkOutInput.value;
   const currencyChoice = currencyChoiceInput.value;
+
+  if (!guestName) {
+    bookingSummary.textContent = "Please enter a guest name before reserving.";
+    return;
+  }
 
   if (checkOut <= checkIn) {
     bookingSummary.textContent = `Check-out must be after check-in. You chose check-in ${checkIn} and check-out ${checkOut}.`;
