@@ -29,6 +29,8 @@ python -m http.server 8000
 
 Then visit:
 
+Live preview
+
 ```text
 http://localhost:8000/index.html
 ```
